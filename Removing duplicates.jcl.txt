@@ -1,0 +1,14 @@
+
+Input file has one or more records for same employee number. Write unique records to output
+
+
+//STEP010  EXEC PGM=SORT 
+//SYSOUT   DD SYSOUT=*                                                
+//SORTIN   DD DSN=MYDATA.URMI.DUPIN,DISP=SHR
+//SORTOUT  DD SYSOUT=*
+//SYSIN    DD *            
+  SORT FIELDS=(1,15,ZD,A) 
+  SUM FIELDS=NONE          
+/*             
+
+                 
